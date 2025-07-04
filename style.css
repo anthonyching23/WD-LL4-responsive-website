@@ -1,0 +1,70 @@
+body {
+  height: 100vh;
+  margin: 0; /* Remove default margin for full-width navbar */
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+h1 {
+  color: #BAF2E9;
+}
+
+/* Simple responsive navbar styles */
+.navbar {
+  display: flex; /* Arrange items in a row */
+  justify-content: space-between; /* Space between title and link */
+  align-items: center; /* Center items vertically */
+  background-color: #333; /* Dark background */
+  color: #fff;
+  padding: 10px 20px; /* Space around navbar content */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Soft shadow for depth */
+  position: sticky; /* Keep navbar at the top when scrolling */
+  top: 0;
+  z-index: 1000; /* Make sure navbar stays above other content */
+  border-bottom: 2px solid #BAF2E9; /* Add a colored border at the bottom */
+}
+
+.navbar-title {
+  font-size: 1.4em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #BAF2E9; /* Match the h1 color for consistency */
+}
+
+.navbar-link {
+  color: #fff; /* White text for link */
+  background-color: #BAF2E9; /* Light blue background */
+  text-decoration: none; /* Remove underline */
+  margin-left: 20px;
+  font-size: 1em;
+  padding: 6px 16px; /* Add some padding */
+  border-radius: 4px; /* Rounded corners */
+  transition: background 0.2s, color 0.2s; /* Smooth hover effect */
+  font-weight: 500;
+}
+
+.navbar-link:hover {
+  background-color: #fff; /* White background on hover */
+  color: #333; /* Dark text on hover */
+  text-decoration: none;
+}
+
+/* Responsive: stack navbar items on small screens */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-link {
+    margin-left: 0;
+    margin-top: 10px;
+    width: 100%;
+    text-align: left;
+  }
+}
